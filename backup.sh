@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Author: pnlinh1207@gmail.com
 DOCKER_CONTAINER_NAME=ubuntu
 DOCKER_IMAGE_NAME=pnlinh/ubuntu:latest
 DOCKER_IMAGE_BACKUP_NAME=docker_image_content.tar.gz
