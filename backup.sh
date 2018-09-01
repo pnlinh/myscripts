@@ -1,6 +1,11 @@
 #!/bin/bash
 #
-# Author: pnlinh1207@gmail.com
+# @athor: pnlinh1207@gmail.com
+#
+# @link: https://www.cyberciti.biz/faq/howto-linux-unix-start-restart-cron/
+#
+# vi /etc/crontab
+# 0  1    * * *   root    bash /root/backup.sh > /dev/null  2>&1
 DOCKER_CONTAINER_NAME=ubuntu
 DOCKER_IMAGE_NAME=pnlinh/ubuntu:latest
 DOCKER_IMAGE_BACKUP_NAME=docker_image_content.tar.gz
