@@ -5,12 +5,12 @@
 # @link: https://www.cyberciti.biz/faq/howto-linux-unix-start-restart-cron/
 #
 # vi /etc/crontab
-# 0  0    * * *   root    bash /root/upload_source_to_gdrive.sh > /dev/null  2>&1
+# 0  2    * * *   root    bash /root/upload_source_to_gdrive.sh > /dev/null  2>&1
 # sudo /etc/init.d/cron restart
 # sudo service cron restart
 # /etc/init.d/cron restart
 TIMESTAMP=$(date +"%F")
-BACKUP_FILE_NAME=/root/backup_"$TIMESTAMP".zip
+BACKUP_FILE_NAME=/root/"$TIMESTAMP"_backup.zip
 PARENT_ID=gdrive_id # ./gdrive list to get ID you need
 cd dockershare/ || return
 echo "Compressing..."
