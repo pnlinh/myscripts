@@ -9,7 +9,8 @@
 # sudo /etc/init.d/cron restart
 # sudo service cron restart
 # /etc/init.d/cron restart
-BACKUP_FILE_NAME=/root/backup.zip
+TIMESTAMP=$(date +"%F")
+BACKUP_FILE_NAME=/root/backup_"$TIMESTAMP".zip
 PARENT_ID=gdrive_id # ./gdrive list to get ID you need
 cd dockershare/ || return
 echo "Compressing..."
