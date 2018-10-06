@@ -5,7 +5,7 @@
 # @link: https://www.cyberciti.biz/faq/howto-linux-unix-start-restart-cron/
 #
 # vi /etc/crontab
-# 0  1    * * *   root    bash /root/docker_backup.sh > /dev/null  2>&1
+# 0  1    * * *   root    bash /root/backup_container_to_gdrive.sh > /dev/null  2>&1
 # sudo /etc/init.d/cron restart
 # sudo service cron restart
 # /etc/init.d/cron restart
