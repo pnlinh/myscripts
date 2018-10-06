@@ -1,7 +1,7 @@
 # My scripts
 My useful scripts
 
-## Add gdrive to evenviroment:
+## 1. Add gdrive to enviroment:
 
 `chmod +x gdrive`
 
