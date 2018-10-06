@@ -10,13 +10,16 @@
 # sudo service cron restart
 # /etc/init.d/cron restart
 
+# Docker config
 DOCKER_CONTAINER_NAME=ubuntu
 DOCKER_CONTAINER_BACKUP_NAME=docker-content.tar.gz
-GDRIVE_FOLDER_BACKUP_ID=0B3-tPMOH_TBFd05WTUljb2w3QkU
+# Gdrive config
+GDRIVE_FOLDER_ID=0B3-tPMOH_TBFd05WTUljb2w3QkU
+GDRIVE_FILE_ID=0B3X9GlR6EmbnNTk0SkV0bm5Hd0E
 
-echo "Backing up Container"
+echo "Backing up Container..."
 docker export "$DOCKER_CONTAINER_NAME" | pv -cN "Docker Export Container" | gzip > /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
-echo "Uploading to Cloud"
-/usr/local/bin/gdrive update "$GDRIVE_FOLDER_BACKUP_ID" /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
+echo "Uploading to Gdrive..."
+/usr/local/bin/gdrive update --parent "$GDRIVE_FOLDER_ID" "$GDRIVE_FILE_ID" /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
 rm -f /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
 echo "[!] All done"
