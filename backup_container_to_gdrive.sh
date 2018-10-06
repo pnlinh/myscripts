@@ -20,6 +20,7 @@ GDRIVE_FILE_ID=0B3X9GlR6EmbnNTk0SkV0bm5Hd0E
 echo "Backing up Container..."
 docker export "$DOCKER_CONTAINER_NAME" | pv -cN "Docker Export Container" | gzip > /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
 echo "Uploading to Gdrive..."
-/usr/local/bin/gdrive update --parent "$GDRIVE_FOLDER_ID" "$GDRIVE_FILE_ID" /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
+# /usr/local/bin/gdrive update --parent "$GDRIVE_FOLDER_ID" "$GDRIVE_FILE_ID" /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
+/usr/local/bin/gdrive update "$GDRIVE_FILE_ID" /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
 rm -f /root/dockerbackup/"$DOCKER_CONTAINER_BACKUP_NAME"
 echo "[!] All done"
