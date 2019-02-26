@@ -1,6 +1,6 @@
 #!bin/bash
 #
-# Author: pnlinh1207@gmail.com
+# @author: pnlinh1207@gmail.com
 echo "Install zip"
 apt-get install zip
 echo "Install zip OK"

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# @athor: pnlinh1207@gmail.com
+# @author: pnlinh1207@gmail.com
 #
 # @link: https://www.cyberciti.biz/faq/howto-linux-unix-start-restart-cron/
 #
